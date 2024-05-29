@@ -1,0 +1,21 @@
+export default {
+  statistics: 'Statistika',
+  members: 'TPPT agzalary',
+  individual: 'Fiziki şahs',
+  kindOfActivity: 'Iş görnüşi',
+  entrepreneurs: 'Telekeçiler',
+  governmentOrganization: 'Döwlet guramalary',
+  businessCompanies: 'Işewür kompaniýalar',
+  privateEnterprices: 'Hususy kärhanalar',
+  foreignCompany: 'Daşary ýurt kompaniýalary',
+  newsLetters: 'Habarlar',
+  ministries: 'Ministrlikler',
+  localization: 'Lokalizasiýa',
+  country: 'Ýurt',
+  region: 'Sebit',
+  userSettings: 'Ulanyjy sazlamalary',
+  jobTitle: 'Jogapkärçilik',
+  users: 'Ulanyjylar',
+  groupBase: 'Baza',
+  groupOrganizations: 'Guramalar'
+}

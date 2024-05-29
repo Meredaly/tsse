@@ -1,0 +1,21 @@
+export default {
+  statistics: 'Статистика',
+  members: 'Участники ТППТ',
+  individual: 'Физическое лицо',
+  kindOfActivity: 'Вид деятельности',
+  entrepreneurs: 'Предприниматели',
+  governmentOrganization: 'Государственные организаци',
+  businessCompanies: 'Хозяйственные общества',
+  privateEnterprices: 'Частные предприятия',
+  foreignCompany: 'Иностранные компании',
+  newsLetters: 'Рассылки',
+  ministries: 'Министерствы',
+  localization: 'Локализация',
+  country: 'Страна',
+  region: 'Регион',
+  userSettings: 'Настройки	пользователи',
+  jobTitle: 'Должность',
+  users: 'Пользователи',
+  groupBase: 'База',
+  groupOrganizations: 'Организации'
+}

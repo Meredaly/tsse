@@ -1,0 +1,219 @@
+.sidebar {
+  width: 100%;
+  height: 100%;
+  padding: 20px 0 20px 16px;
+  // .sidebar__box
+  &__box {
+    height: 100%;
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    padding-right: 16px;
+    &::-webkit-scrollbar {
+      width: 3px;
+    }
+    &::-webkit-scrollbar-track {
+      background: transparent;
+    }
+    &::-webkit-scrollbar-thumb {
+      background: var(--primary);
+    }
+  }
+  // .sidebar__logo
+  &__logo {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--border-radius);
+    img {
+      width: 40px;
+      height: 40px;
+    }
+  }
+  // .sidebar__header
+  &__header {
+    margin-bottom: 25px;
+  }
+  // .sidebar__logo
+  &__logo {
+  }
+  // .sidebar__menu
+  &__menu {
+  }
+  // .sidebar__log-out
+  &__log-out {
+    margin-top: auto;
+  }
+  &._mini {
+    .sidebar__logo {
+      background-color: transparent;
+      padding-left: 0;
+      padding-right: 0;
+      &:deep() {
+        span {
+          width: 80px;
+          svg {
+            width: 100%;
+          }
+        }
+      }
+    }
+    .menu__group-button {
+      p {
+        display: none;
+      }
+    }
+    .menu__group-body {
+      padding-left: 0;
+    }
+    .menu__link {
+      p {
+        display: none;
+      }
+    }
+    .menu__sub-list {
+      a {
+        padding-left: 0;
+      }
+    }
+  }
+}
+.menu {
+  // .menu__body
+  &__body {
+  }
+  // .menu__list
+  &__list {
+  }
+  // .menu__item
+  &__item {
+    &:not(:first-child) {
+      margin-top: 10px;
+    }
+  }
+  // .menu__group
+  &__group {
+    width: 100%;
+    margin-top: 10px;
+  }
+  // .menu__group-button
+  &__group-button {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: var(--border-radius);
+    padding: 16px;
+    background-color: var(--background);
+    color: var(--dark);
+    text-transform: uppercase;
+    font-weight: 300;
+    p {
+      letter-spacing: 3px;
+      font-weight: 600;
+    }
+    &:deep() {
+      span {
+        transition: 0.2s;
+      }
+      svg {
+        width: 16px;
+        height: 16px;
+      }
+    }
+    // .menu__group-button_active
+    &_active {
+      &:deep() {
+        span {
+          transform: rotate(180deg);
+        }
+      }
+    }
+  }
+  // .menu__group-body
+  &__group-body {
+    margin-top: 2px;
+    background-color: var(--background);
+    border-radius: var(--border-radius);
+    padding: 8px;
+  }
+
+  // .menu__link
+  &__link {
+    display: flex;
+    align-items: center;
+    padding: 16px;
+    position: relative;
+    border-radius: var(--border-radius);
+    color: var(--dark);
+    :deep(.icon) {
+      width: 16px;
+      height: 16px;
+      svg {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    p {
+      padding-left: 10px;
+    }
+    &:hover,
+    &.router-link-active,
+    &.router-link-exact-active {
+      background-color: var(--hover-light);
+    }
+
+    &.router-link-active,
+    &.router-link-exact-active {
+      background-color: var(--hover-light);
+      & + .menu__sub {
+        display: block;
+      }
+    }
+  }
+
+  // .menu__sub
+  &__sub {
+    background-color: var(--hover-light);
+    padding-top: 10px;
+    margin-top: -10px;
+    display: none;
+  }
+  // .menu__sub-list
+  &__sub-list {
+    padding: 0 16px 16px 16px;
+  }
+  // .menu__sub-item
+  &__sub-item {
+    width: 100%;
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
+  // .menu__sub-link
+  &__sub-link {
+    width: 100%;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: var(--dark);
+    padding-left: 40px;
+    display: block;
+    display: flex;
+    align-items: center;
+    &.router-link-active,
+    &.router-link-exact-active,
+    &:hover {
+      color: var(--primary);
+    }
+    &::before {
+      content: '';
+      width: 4px;
+      height: 4px;
+      background-color: var(--dark);
+      border-radius: 50%;
+      margin-right: 10px;
+    }
+  }
+}

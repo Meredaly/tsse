@@ -1,0 +1,36 @@
+{
+  "name": "tsse",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc && vite build",
+    "preview": "vite preview --port 3000",
+    "archive": "tar -czf archive.tar.gz dist",
+    "transfer": "sudo scp -i ~/.ssh/id_rsa archive.tar.gz user@10.192.1.59:/home/user/front",
+    "cleanup-local": "rm -rf dist archive.tar.gz",
+    "cleanup-remote": "ssh user@10.192.1.59 'sudo rm -rf /home/user/front/tsse/dist && sudo tar -xzf /home/user/front/archive.tar.gz -C /home/user/front/tsse && sudo rm /home/user/front/archive.tar.gz && sudo pm2 restart all'",
+    "deploy": "npm run build && npm run archive && npm run transfer && npm run cleanup-local && npm run cleanup-remote"
+  },
+  "dependencies": {
+    "@intlify/unplugin-vue-i18n": "^0.10.0",
+    "@vueuse/head": "^1.1.26",
+    "axios": "^1.4.0",
+    "chart.js": "^4.3.0",
+    "chartjs-plugin-datalabels": "^2.2.0",
+    "pinia": "^2.0.36",
+    "vue": "^3.2.47",
+    "vue-chartjs": "^5.2.0",
+    "vue-i18n": "^9.2.2",
+    "vue-router": "^4.1.6",
+    "vue3-cookies": "^1.0.6"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^4.1.0",
+    "sass": "^1.62.1",
+    "typescript": "^5.0.2",
+    "vite": "^4.3.2",
+    "vue-tsc": "^1.4.2"
+  }
+}

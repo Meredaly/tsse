@@ -1,0 +1,20 @@
+export default {
+  name: 'Ady',
+  text: 'Tekst',
+  typeMailing: 'Habar görnüşi',
+  back: 'Yzyna',
+  newsletters: 'Habarlar',
+  chooseTheOptionsYouWant: 'Isleýän görnüşleriňizi saýlaň',
+  kindOfActivity: 'Iş görnüşi',
+  choose: 'Saýlaň',
+  selectCompanies: 'Kompaniýalary saýlaň',
+  sendForm: 'Ibermek görnüşi',
+  nameExhibition: 'Serginiň ady näme?',
+  enterText: 'Tekst giriziň',
+  writeText: 'Tekst ýazyň',
+  attachFile: 'Faýl birikdirmek',
+  selectFile: 'Faýly saýlaň',
+  attachFileMessage: 'Faýl diňe e-poçta bilen iberilýär',
+  send: 'Iber',
+  selectActivities: 'Işleri saýlaň'
+}
